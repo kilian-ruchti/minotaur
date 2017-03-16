@@ -8,6 +8,7 @@ Sometimes, a hero comes and slays a Minotaur.
 The goal of this homework is to help one of these heroes: Prof. Buchs, using logic programming.
 
 As a technological warrior, Prof. Buchs goes into the labyrinth with his cell phone as a lighting source.
+The cell phone consumes one battery unit in each room.
 Alas, the battery may not be sufficient to reach the Minotaur or an exit.
 In this case, Prof. Buchs is doomed to a never-ending death within the labyrinth.
 
