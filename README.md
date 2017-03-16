@@ -15,7 +15,7 @@ A labyrinth is a set of rooms related with doors, that only open in one directio
 It is thus impossible to go back.
 Our labyrinth does not contain cycles: it is impossible to come back later in a room.
 
-1. Represent the doors of this labyrinth ![labyrinth](https://raw.githubusercontent.com/unige-semantics-2017/minotaur/master/labyrinth.pdf)
+1. Represent the doors of [this labyrinth](https://raw.githubusercontent.com/unige-semantics-2017/minotaur/master/labyrinth.pdf)
    with the `doors (from: Term, to: Term)` function.
    Its parameters are rooms.
 2. Represent entrances and exits
