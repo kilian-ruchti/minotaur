@@ -39,9 +39,9 @@ Our labyrinth does not contain cycles: it is impossible to come back later in a 
 ## Test
 
 You can run the tests using:
-```sh
-$ swift test   # for mac users
-$ docker build # for linux users
+```shell
+$ swift test     # for mac users
+$ docker build . # for linux users
 ```
 
 Do **not** modify the given tests.
