@@ -63,6 +63,18 @@ class minotaurTests: XCTestCase {
         XCTAssertEqual(resultsOf (goal: goal, variables: [through]).count, 2, "number of paths is incorrect")
     }
 
+/*    func testPath2() {
+        let through = Variable (named: "through")
+        let goal    = path (from: room (4,4), to: room (3,4), through: through)
+        XCTAssertEqual(resultsOf (goal: goal, variables: [through]).count, 1, "number of paths is incorrect")
+    }
+
+    func testPath3() {
+        let through = Variable (named: "through")
+        let goal    = path (from: room (4,4), to: room (4,4), through: through)
+        XCTAssertEqual(resultsOf (goal: goal, variables: [through]).count, 1, "number of paths is incorrect")
+    }*/
+
     func testBattery() {
         let through = Variable (named: "through")
         let goal    = path (from: room (4,4), to: room (3,2), through: through) &&
@@ -85,14 +97,16 @@ class minotaurTests: XCTestCase {
 
     static var allTests : [(String, (minotaurTests) -> () throws -> Void)] {
         return [
-            ("testDoors", testDoors),
-            ("testEntrance", testEntrance),
-            ("testExit", testExit),
-            ("testMinotaur", testMinotaur),
-            ("testPath", testPath),
-            ("testBattery", testBattery),
-            ("testLosing", testLosing),
-            ("testWinning", testWinning),
+          ("testDoors", testDoors),
+          ("testEntrance", testEntrance),
+          ("testExit", testExit),
+          ("testMinotaur", testMinotaur),
+          ("testPath", testPath),
+          //("testPath2", testPath2),
+          //("testPath3", testPath3),
+          ("testBattery", testBattery),
+          ("testLosing", testLosing),
+          ("testWinning", testWinning)
         ]
     }
 }
