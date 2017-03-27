@@ -143,13 +143,13 @@ func minotaurInPath (path: Term) -> Goal {
     (delayed (
       fresh { x in
         fresh { y in
-          (path === List.cons(x,y) &&
+          (path === List.cons(x,y)) &&
 
           /* We check if the minautor is in the first room of the path */
           (minotaur(location: x) ||
 
           /* And if not, we repeat the test with the rest of the path */
-          minotaurInPath (path: y)))
+          minotaurInPath(path: y))
         }
       }
     )
@@ -160,20 +160,19 @@ func minotaurInPath (path: Term) -> Goal {
  and where we will go in the room of the minautor */
 func winning (through: Term, level: Term) -> Goal {
   return
-    /* We check if the minautor is in the path */
-    minotaurInPath(path: through) &&
 
     /* We chaeck if the battery will be okay */
     battery(through: through, level: level) &&
 
+    /* We check if the minautor is in the path */
+    minotaurInPath(path: through) &&
+
     /* And we check if there is an entrance and an exit in the path */
-    delayed (
-      fresh { start in
-        fresh { end in
-          (entrance(location: start) &&
-          exit(location: end) &&
-          path(from: start, to: end, through: through))
-        }
+    fresh { start in
+      fresh { end in
+        (entrance(location: start) &&
+        exit(location: end) &&
+        path(from: start, to: end, through: through))
       }
-    )
+    }
 }
